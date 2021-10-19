@@ -28,7 +28,7 @@ liczby_1=[1,2,3,4,5,6,7,8,9,10]
 
 def parzyste(liczby_1):
     liczby_p=[]
-    for x in range(len(liczby_1)-1):
+    for x in liczby_1:
         if x ==0:
             continue
         elif x % 2==0:
