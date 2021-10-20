@@ -10,7 +10,6 @@ def zad2(liczba1: int,liczba2: int):
 
 #3
 def zad3(liczba: int):
-    odp=''
     wynik=liczba%2==0
     if wynik is True :
         odp='liczba parzysta'
@@ -25,12 +24,12 @@ def zad4(L1: int,L2: int,L3: int):
 
 #5
 def zad5(lista: list, liczba: int):
-    for x in lista:
-        if liczba in lista:
-            wynik="element w liscie"
-        else:
-            wynik="elemntu nie ma w liscie"
-        return wynik
+
+	if liczba in lista:
+		wynik="element w liscie"
+	else:
+		wynik="elemntu nie ma w liscie"
+	return wynik
 
 #6
 def zad6(lista1: list, lista2: list):
@@ -42,8 +41,7 @@ def zad6(lista1: list, lista2: list):
     #kazdy leemnt do **3
     lista4=[]
     for x in lista3:
-        y=x**3
-        lista4.append(y)
+        lista4.append(x**3)
     #zwrocic liste
     return lista4
 
