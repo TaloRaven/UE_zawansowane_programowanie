@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  app:
+    image: python:3.10
+    command: sleep 10000
+    working_dir: /app
+    volumes:
+      - .:/app
+    ports:
+        - 5001:5000
+
+#docker-compose exec app bash  
+#docker-compose up -d
