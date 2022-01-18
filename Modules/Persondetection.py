@@ -3,12 +3,12 @@ import imutils
 import numpy as np
 
 
-def person_detect(img,):
+def person_detect(image):
     protopath = "Models/MobileNetSSD_deploy.prototxt"
     modelpath = "Models/MobileNetSSD_deploy.caffemodel"
     detector = cv2.dnn.readNetFromCaffe(
         prototxt=protopath, caffeModel=modelpath)
-    image = cv2.imread('img/{}'.format(img))
+    
     image = imutils.resize(image, width=600)
 
     (H, W) = image.shape[:2]
@@ -28,7 +28,7 @@ def person_detect(img,):
             cv2.rectangle(image, (startX, startY),
                           (endX, endY), (0, 0, 255), 2)
 
-    print(img, ' ', len(persons))
+    print(' ', len(persons))
 
     cv2.putText(
         image,
